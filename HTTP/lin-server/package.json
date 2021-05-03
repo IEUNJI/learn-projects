@@ -1,0 +1,28 @@
+{
+  "name": "lin-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src -d dist",
+    "babel:watch": "babel src -d dist --watch"
+  },
+  "bin": {
+    "lin-server": "bin/www"
+  },
+  "keywords": [],
+  "author": "ieunji <2690055722@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "ejs": "^3.1.3",
+    "mime": "^2.4.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3"
+  }
+}
