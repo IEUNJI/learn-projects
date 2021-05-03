@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class People {
+      constructor(name) {
+        this.name = name;
+      }
+    }
+
+    let p = new People('IEUNJI');
+
+    // const newMap = new Map();
+    // newMap.set(p, 'IEUNJI'); // 内存中还存在 People 的实例引用
+
+    const newWeakMap = new WeakMap();
+    newWeakMap.set(p, 'IEUNJI'); // 内存中不存在 People 的实例引用
+
+    p = null;
+  </script>
+</body>
+</html>
