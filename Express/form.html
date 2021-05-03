@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 单文件上传 -->
+  <form action="/profile" method="POST" enctype="multipart/form-data">
+    <input type="file" name="avatar">
+    <button>提交</button>
+  </form>
+
+  <!-- 多文件上传 -->
+  <div id="box" style="background: red; width: 100px; height: 100px;"></div>
+
+  <script>
+    const box = document.querySelector('#box');
+
+    box.addEventListener('dragover', e => {
+      e.preventDefault();
+    });
+
+    box.addEventListener('drop', e => {
+      e.preventDefault();
+
+      const fd = new FormData();
+      Array.from(e.dataTransfer.files).forEach(file => {
+        fd.append('avatar', file);
+      });
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('post', '/profiles');
+      xhr.onload = () => {
+        alert('上传成功');
+      };
+      xhr.send(fd);
+    });
+  </script>
+</body>
+
+</html>
