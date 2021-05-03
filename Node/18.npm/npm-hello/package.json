@@ -1,0 +1,27 @@
+{
+  "name": "@linzijun/hello",
+  "version": "1.0.1",
+  "description": "hello npm!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "linzijun-hello": "bin/linzijun-hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IEUNJI/npm-hello.git"
+  },
+  "keywords": [
+    "ieunji",
+    "linzijun",
+    "hello"
+  ],
+  "author": "ieunji <2690055722@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IEUNJI/npm-hello/issues"
+  },
+  "homepage": "https://github.com/IEUNJI/npm-hello#readme"
+}
